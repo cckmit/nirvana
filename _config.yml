@@ -12,8 +12,8 @@ language: zh-CN
 timezone: ''
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://lzhwweb.github.io/nirvana/
-root: /nirvana/
+url: https://www.nirvana.net.cn/
+root: /
 permalink: :category/:title/
 permalink_defaults:
 pretty_urls:
@@ -109,9 +109,11 @@ deploy:
 - 
   type: git
   repo: 
-    github: https://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@github.com/lzhwWeb/nirvana.git
+    github: https://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@github.com/lzhwWeb/nirvana.git
 - 
-  type: leancloud_counter_security_sync
+  type: leancloud_counter_security
+- 
+  type: baidu_url_submitter
 # 文章字数统计
 symbols_count_time:
   symbols: true
@@ -126,6 +128,7 @@ symbols_count_time:
   format: html
   limit: 10000
 
+## leancloud
 leancloud_counter_security:
   enable_sync: true
   app_id: SPsNUvBhME7XmrjzCfHkUu3e-gzGzoHsz   # 同前文的id
@@ -133,3 +136,16 @@ leancloud_counter_security:
   username: nirvana
   password: anavrin
   server_url: https://leancloud.cn # <your server url>
+
+## baidu 
+baidu_url_submit:
+  count: 50 ## 比如3，代表提交最新的三个链接
+  host: www.nirvana.net.cn ## 在百度站长平台中注册的域名
+  token: KUfUnvI33hb4YAFl ## 请注意这是您的秘钥， 请不要发布在公众仓库里!
+  path: baidu_urls.txt ## 文本文档的地址， 新链接会保存在此文本文档里
+
+## sitemap
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml

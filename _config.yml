@@ -109,7 +109,7 @@ deploy:
 - 
   type: git
   repo: 
-    github: https://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@github.com/lzhwWeb/nirvana.git
+    github: https://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@github.com/lzhwWeb/nirvana.git
 - 
   type: leancloud_counter_security
 - 

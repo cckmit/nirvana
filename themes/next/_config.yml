@@ -89,18 +89,19 @@ menu:
   #sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
   home: /
+  咨讯: /categories/news
+  前端: /categories/javascript
+  webpack: /categories/webpack
+  设计模式(TS): /categories/DesignPattern
+  算法: /categories/algorithm
+  react-native: /categories/reactnative
   git: /categories/git
   linux: /categories/linux
   android: /categories/android
   随笔: /categories/informal
   mac: /categories/mac
-  react-native: /categories/reactnative
-  算法: /categories/algorithm
   读书笔记: /categories/note
   开发工具: /categories/tool
-  设计模式(TS): /categories/DesignPattern
-  前端: /categories/javascript
-  webpack: /categories/webpack
 
 # Enable / Disable menu icons / item badges.
 menu_settings:

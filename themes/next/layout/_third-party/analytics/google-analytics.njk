@@ -1,6 +1,8 @@
 {%- if theme.google_analytics.tracking_id %}
   {%- if not theme.google_analytics.only_pageview %}
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ theme.google_analytics.tracking_id }}"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1665861109750024"
+     crossorigin="anonymous"></script>
     <script{{ pjax }}>
       if (CONFIG.hostname === location.hostname) {
         window.dataLayer = window.dataLayer || [];

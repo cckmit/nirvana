@@ -1,7 +1,8 @@
 ---
 title: react-native布局
 date: 2021-03-11 21:12:40
-category: reactnative---
+category: reactnative
+---
 
 ## 宽度单位和像素密度
 

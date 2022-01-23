@@ -1,5 +1,5 @@
 ---
-title: nginx:[warn] the "user" directive makes sense only if the master process runs with super-user
+title: nginx:[warn] the 'user' directive makes sense only if the master process runs with super-user
 date: 2021-11-19 16:28:03
 category: javascript
 ---

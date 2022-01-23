@@ -6,7 +6,7 @@
 title: '涅槃快乐是金'
 subtitle: ''
 description: '个人学习笔记'
-keywords: 前端,javascript,node,git,webpack,css
+keywords: 前端,javascript,node,git,webpack,css,react-native,linux
 author: nirvana
 language: zh-CN
 timezone: ''
@@ -14,7 +14,7 @@ timezone: ''
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://www.nirvana.net.cn/
 root: /
-permalink: :category/:title/
+permalink: :title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -109,9 +109,9 @@ deploy:
 - 
   type: git
   repo: 
-    github: https://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@github.com/lzhwWeb/nirvana.git
+    github: https://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@github.com/lzhwWeb/nirvana.git
 - 
-  type: leancloud_counter_security
+  type: leancloud_counter_security_sync
 - 
   type: baidu_url_submitter
 # 文章字数统计

@@ -1,7 +1,7 @@
 ---
 title: 尤雨溪：Vite 2.0 正式发布！
 date: 2021-06-10 16:48:55
-category: javascript
+category: news
 ---
 ## **Vite是什么**
 

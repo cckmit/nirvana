@@ -1,7 +1,7 @@
 ---
 title: webstorm 2018 激活破解方法大全
 date: 2021-03-11 21:12:40
-category: javascript
+category: news
 ---
 
 **方法一：（更新时间：2018/4/8）v3.3**

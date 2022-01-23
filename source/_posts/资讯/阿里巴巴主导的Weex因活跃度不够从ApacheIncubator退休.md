@@ -1,7 +1,7 @@
 ---
 title: 阿里巴巴主导的 Weex 因活跃度不够从 Apache Incubator 退休
 date: 2021-06-10 16:28:03
-category: javascript
+category: news
 ---
 [根据 Apache Incubator 邮件列表的信息](https://www.oschina.net/action/GoToLink?url=https%3A%2F%2Flists.apache.org%2Fthread.html%2Freb2523a568b5ce5cfc1b8017c20106221f0ab689ebcf3cb42feb8a54%2540%253Cgeneral.incubator.apache.org%253E)，上周发起的关于 Weex 是否从 Apache Incubator 退休的投票已结束。投票结果显示，由于没有[-1]否决票，所以 Weex 从 Apache Incubator 退休的投票获得了 IPMC 的一致通过。
 

@@ -1,5 +1,5 @@
 ---
-title: nginx:[emerg] the "ssl" parameter requires ngx_http_ssl_module
+title: nginx:[emerg] the 'ssl' parameter requires ngx_http_ssl_module
 date: 2021-11-26 16:28:03
 category: linux
 ---

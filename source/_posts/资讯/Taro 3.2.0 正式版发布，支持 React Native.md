@@ -1,7 +1,7 @@
 ---
 title: Taro 3.2.0 正式版发布，支持 React Native
 date: 2021-04-21 14:51:54
-category: javascript
+category: news
 ---
 Taro 是一个开放式跨端跨框架解决方案，支持使用 React/Vue/Nerv 等框架来开发微信/京东/百度/支付宝/字节跳动/ QQ 小程序/H5 等应用，现已发布 3.2.0 正式版，主要更新内容如下：
 

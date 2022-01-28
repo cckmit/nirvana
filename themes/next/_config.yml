@@ -89,7 +89,7 @@ menu:
   #sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
   home: /
-  咨讯: /categories/news
+  资讯: /categories/news
   前端: /categories/javascript
   webpack: /categories/webpack
   设计模式(TS): /categories/DesignPattern

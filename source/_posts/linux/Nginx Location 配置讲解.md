@@ -1,7 +1,7 @@
 ---
 title: Nginx Location 配置讲解
 date: 2022-01-06 16:28:03
-category: linux
+categories: linux
 ---
 
 ## 前言

@@ -1,7 +1,7 @@
 ---
 title: 五种可视化方案分析 webpack 打包性能瓶颈
 date: 2021-04-21 14:30:50
-category: webpack
+categories: webpack
 ---
 ### 一、测量构建时间
 

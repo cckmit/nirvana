@@ -1,7 +1,7 @@
 ---
 title: 为什么是 devDependencies?
 date: 2021-03-13 11:35:44
-category: webpack
+categories: webpack
 ---
 `dependencies` 和 `devDependencies` 有什么区别？我使用的包应该放到什么地方？上网找资料，大神群咨询。得到的答案是：
 

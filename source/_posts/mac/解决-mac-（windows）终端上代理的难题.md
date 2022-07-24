@@ -1,7 +1,7 @@
 ---
 title: 解决-mac-（windows）终端上代理的难题
 date: 2021-03-10 21:12:40
-category: mac
+categories: mac
 ---
 买了 ss （shadowsocks）帐号，装了 ss 代理的软件，浏览器上也装了代理的插件，一直用的都挺好的，但是最近遇到了一些情况
 

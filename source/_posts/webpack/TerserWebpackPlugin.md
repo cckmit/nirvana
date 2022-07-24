@@ -1,7 +1,7 @@
 ---
 title: TerserWebpackPlugin
 date: 2021-06-10 16:55:31
-category: webpack
+categories: webpack
 ---
 ## 入门 [](https://webpack.docschina.org/plugins/terser-webpack-plugin/#getting-started)
 

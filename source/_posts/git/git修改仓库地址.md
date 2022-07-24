@@ -1,7 +1,7 @@
 ---
 title: git 修改仓库地址
 date: 2021-04-21 14:50:53
-category: git
+categories: git
 ---
 ## 1、 通过命令直接修改远程地址
  ```

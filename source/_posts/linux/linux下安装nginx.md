@@ -1,7 +1,7 @@
 ---
 title: linux版本：CentOS7 64位
 date: 2021-03-09 21:12:40
-category: linux
+categories: linux
 ---
 
 【yum 安装最新版nginx：[https://www.jianshu.com/p/a2de35ee5283](https://www.jianshu.com/p/a2de35ee5283)】

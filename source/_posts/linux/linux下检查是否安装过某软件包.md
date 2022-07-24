@@ -1,7 +1,7 @@
 ---
 title: linux下检查是否安装过某软件包
 date: 2021-03-09 21:12:40
-category: linux
+categories: linux
 ---
 1、rpm包安装的，可以用 rpm -qa 看到，如果要查找某软件包是否安装，用** rpm -qa | grep "软件或者包的名字"**
 

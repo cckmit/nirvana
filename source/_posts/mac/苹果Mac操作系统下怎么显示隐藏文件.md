@@ -1,7 +1,7 @@
 ---
 title: 苹果Mac操作系统下怎么显示隐藏文件
 date: 2021-03-10 21:12:40
-category: mac
+categories: mac
 ---
 方法一：
 第一步：打开「终端」应用程序。

@@ -1,7 +1,7 @@
 ---
 title: happy pack 原理解析
 date: 2021-04-21 14:43:49
-category: webpack
+categories: webpack
 ---
 ## 前言
 

@@ -1,7 +1,7 @@
 ---
 title: git stash
 date: 2021-10-06 21:19:18
-category: git
+categories: git
 ---
 >当你使用 git 正在开发一个功能的时候，如果你突然需要到另一个分支去开发却不想放弃当前的改动的时候，你可以使用 git stash
 

@@ -1,7 +1,7 @@
 ---
 title: Mac-四种修改Hosts的方法
 date: 2021-03-10 21:12:40
-category: mac
+categories: mac
 ---
 　　1、通过 VI 编辑器修改
 

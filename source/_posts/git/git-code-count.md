@@ -1,7 +1,7 @@
 ---
 title: git代码统计
 date: 2021-03-09 21:12:40
-category: git
+categories: git
 ---
 ## 命令行
 

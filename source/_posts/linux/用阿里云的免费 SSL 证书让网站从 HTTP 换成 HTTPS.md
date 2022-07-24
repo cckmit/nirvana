@@ -1,7 +1,7 @@
 ---
 title: 用阿里云的免费 SSL 证书让网站从 HTTP 换成 HTTPS
 date: 2021-11-22 16:28:03
-category: linux
+categories: linux
 ---
 
 >原文：https://ninghao.net/blog/4449

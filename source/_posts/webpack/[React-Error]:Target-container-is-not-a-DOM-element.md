@@ -1,7 +1,7 @@
 ---
 title: '[React Error]: Target container is not a DOM element'
 date: 2021-06-10 16:46:33
-category: webpack
+categories: webpack
 ---
 webpack在后端对React组件进行渲染的时候，浏览器控制台报错：
 

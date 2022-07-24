@@ -1,7 +1,7 @@
 ---
 title: 值得收藏的shell脚本
 date: 2021-09-23 16:28:03
-category: linux
+categories: linux
 ---
 **1\. 轮询检测Apache状态并启用钉钉报警**
 

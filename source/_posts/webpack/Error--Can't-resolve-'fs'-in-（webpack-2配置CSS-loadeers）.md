@@ -1,7 +1,7 @@
 ---
 title: Error--Can't resolve 'fs' in （webpack 2配置CSS-loadeers）
 date: 2021-03-11 21:12:40
-category: webpack
+categories: webpack
 ---
 
 #### 前言，在之前有配置过webpack 2 中css loaders，但是怎么也不正确

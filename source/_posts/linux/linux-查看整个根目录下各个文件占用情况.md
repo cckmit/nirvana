@@ -1,7 +1,7 @@
 ---
 title: linux 查看磁盘空间占用情况
 date: 2021-03-09 21:12:40
-category: linux
+categories: linux
 ---
 服务器运行一点时间后各种的项目文件，日志文件，数据库备份登，会越来越多，在linux下不像是win下一样直接右键属性可以查看，那么怎么看呢？  用到的命令 du 和 df 命令。
 

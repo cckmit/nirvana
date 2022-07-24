@@ -1,7 +1,7 @@
 ---
 title: dotenv，从文件加载环境变量
 date: 2021-04-14 15:34:17
-category: webpack
+categories: webpack
 ---
 Node.js程序运行时加载不同的配置，比如开发环境和生产环境的数据数据库配置就可能不一样，使用 process.env.DB_HOST 环境变量，可以在Node.js程序内部方便获取参数信息。
 

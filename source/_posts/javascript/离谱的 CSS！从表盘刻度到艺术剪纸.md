@@ -1,0 +1,377 @@
+---
+title: 离谱的 CSS！从表盘刻度到艺术剪纸
+date: 2022-05-08 16:28:03
+categories: 前端
+tags: [CSS]
+---
+## 单标签，使用 conic-gradient 实现表盘刻度
+最简单便捷的方式，就是利用角向渐变的方式 `conic-gradient`，代码也非常简单，首先，我们实现一个重复角向渐变：
+```
+div {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: repeating-conic-gradient(
+        #000 0, #000 .8deg, transparent 1deg, transparent calc((360 / 60) * 1deg)
+    );
+}
+```
+其实比较难理解的是 calc((360 / 60) * 1deg)，这是因为表盘一共通常有 60 个刻度。效果大概是这样：
+![](https://upload-images.jianshu.io/upload_images/10024246-8008be109168a419.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+
+接下来，只需要将中间镂空即可。如果背景色是白色，直接叠加一个圆形即可，当然，更好的方式是通过 mask 属性进行镂空：
+```
+{
+    background: repeating-conic-gradient(
+        #000 0, #000 .8deg, transparent 1deg, transparent calc(360 / 60 * 1deg)
+    );
+    mask: radial-gradient(transparent 0, transparent 140px, #000 140px)
+}
+```
+这样，我们就得到了一个表盘刻度：
+
+![](https://upload-images.jianshu.io/upload_images/10024246-ce25e7b9f720bbe2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+这是使用一个标签就能实现的方式，当然，缺点也很明显：
+![image.png](https://upload-images.jianshu.io/upload_images/10024246-43eacff5eb580f0f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+- 锯齿感严重，渐变的通病
+- 由于是使用的角向渐变，刻度存在头重脚轻的现象，越向内部，宽度越窄（刻度愈大，差异愈加明显）
+
+
+## 使用多个标签实现
+如果不介意使用太多的标签，那么通常而言，更容易想到的方法就是利用 60 个标签，加上旋转实现：
+```
+<div class="g-container">
+        <div class="g-item"></div>
+        // ... 一共 60 个
+        <div class="g-item"></div>
+    </div>
+.g-item {
+    position: absolute;
+    width: 4px;
+    height: 12px;
+    background: #000;
+    left: 0;
+    top: 0;
+    transform-origin: 0 150px;
+}
+@for $i from 1 through 60 { 
+    .g-item:nth-child(#{$i}) {
+        transform: rotate(#{($i - 1) * 6deg});
+    }
+}
+```
+像是这样，我们通过 60 个 div 标签，利用 SASS 的 for 语法减少重复的代码量，批量实现每个元素逐渐绕一点旋转一定的角度，也是可以实现一个表盘刻度的：
+
+![](https://upload-images.jianshu.io/upload_images/10024246-f3a45416943b27fd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+这个方案的好处是，每个刻度粗细一致，并且，不会产生锯齿。
+
+## 借助 -webkit-box-reflect 减少标签数
+当然，上述方案的缺点就在于，使用了 60 个标签去完成这样一个简单的图形，有点太奢侈了。
+
+我们希望尽可能的优化优化标签的个数。此时，我们很容易的想到 `-- -webkit-box-reflect`，倒影效果属性。
+
+[-webkit-box-reflect ](https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-box-reflect)是一个非常有意思的属性，它让 CSS 有能力像镜子一样，反射我们元素原本绘制的内容。
+
+`-webkit-box-reflect` 的语法非常简单，最基本的用法像是这样：
+```
+div {
+    -webkit-box-reflect: below;
+}
+```
+其中，`below` 可以是 `below | above | left | right` 代表下上左右，也就是有 4 个方向可以选。
+
+假设我们有如下一张图片：
+```
+div {
+    background-image: url('https://images.pokemontcg.io/xy2/12_hires.png');
+}
+```
+
+加上 -webkit-box-reflect: right，也就是右侧的倒影：
+```
+div {
+    background-image: url('https://images.pokemontcg.io/xy2/12_hires.png');
+    -webkit-box-reflect: right;
+}
+```
+效果如下，生成了一个元素右侧的镜像元素：
+
+![image.png](https://upload-images.jianshu.io/upload_images/10024246-e5c154515d869928.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+借助 `-webkit-box-reflect: right`，我们至少可以从 60 个标签减少到 15 个标签的使用。简单的嵌套两层即可。
+
+我们简单改变一下 HTML 结构：
+```
+<div class="g-parent">
+    <div class="g-container">
+        <div class="g-item"></div>
+        // ... 一共 16 个
+        <div class="g-item"></div>
+    </div>
+</div>
+```
+这一次，我们只需要实现 1/4 圆的刻度即可：
+```
+@for $i from 1 through 16 { 
+    .g-item:nth-child(#{$i}) {
+        transform: rotate(#{($i - 1) * 6deg});
+    }
+}
+```
+我们可以得到这样一个图形：
+
+
+
+基于这个图形，我们只需要先向左侧倒影一次，再向下倒影一次即可：
+```
+.g-container {
+    -webkit-box-reflect: below;
+}
+.g-parent {
+    -webkit-box-reflect: left;
+}
+```
+效果如下：
+![](https://upload-images.jianshu.io/upload_images/10024246-e5c7eaa2e6a8f743.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+大致的效果就出来了，当然，0点、3点、6点、9点上左下右 4 个刻度有点问题。不过 `-webkit-box-reflect `也提供距离调整功能，再简单修改下代码：
+```
+.g-container {
+    -webkit-box-reflect: below 4px;
+}
+.g-parent {
+    -webkit-box-reflect: left -4px;
+}
+```
+这次，效果就是我们想要的最终效果：
+
+![](https://upload-images.jianshu.io/upload_images/10024246-60e3f7a4597935fc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+我们就成功地借助 `-webkit-box-reflect` 节约了 3/4 的标签数量。完整的代码：[CodePen Demo -- Clock ticks](https://codepen.io/Chokcoco/pen/eYybEpW)
+
+## -webkit-box-reflect 与剪纸艺术
+到这里，我不由得想到，这种对折、再对折，镜像再镜像的方式，与我们小时候的折纸艺术非常的类似。
+
+那么，基于这样一个模板：
+```
+<div class="g-parent">
+    <div class="g-container">
+        <div class="g-item"></div>
+    </div>
+</div>
+.g-container {
+    -webkit-box-reflect: below;
+}
+.g-parent {
+    -webkit-box-reflect: left;
+}
+```
+我只需要绘制 .g-item 里面的内容，将他通过 2 次 `-webkit-box-reflect `镜像，就能得到一个剪纸图形。
+
+而如何得到随机有意思的不规则图形呢？
+
+clip-path 是个很不错的选择，我们通过 clip-path 随机对一个矩形进行裁剪：
+```
+.g-item {
+    width: 150px;
+    height: 150px;
+    background: #000;
+    clip-path: polygon(25% 0%,71% 66%,59% 0%,79% 23%,95% 4%,100% 40%,77% 100%,38% 100%,47% 71%,36% 30%,23% 60%,0% 100%,5% 37%);
+}
+```
+效果如下：
+
+![](https://upload-images.jianshu.io/upload_images/10024246-8f655375d367c24e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+经过两次镜像后的效果如下：
+
+![](https://upload-images.jianshu.io/upload_images/10024246-1baf7d2abdd1fb84.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+是不是有那么点意思了？可以随机利用 clip-path 多尝试几次，可以得到不同的效果：
+![](https://upload-images.jianshu.io/upload_images/10024246-f52dac57665de163.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+[CodePen Demo -- Pure CSS Page Cutting](https://codepen.io/Chokcoco/pen/oNpJewQ)
+
+## -webkit-box-reflect 配合 clip-path 配合 mask
+但是上面的图形看着还是太简单了，几个原因，一是对折的次数和角度不够，缺少对折次数和不同角度的对折，二是图形不够负责。
+
+我又想起了之前看到过的一篇类似的剪纸相关的文章 -- [Paper Snowflakes: Combining Clipping and Masking in CSS](https://css-irl.info/paper-snowflakes-combining-clipping-and-masking-in-css/)。
+
+再上述的基础上，还使用了 mask，将图形切割的更细。
+
+我们再来一次，还是同样的结构，当然，为了得到更负责的图形，我们设置了 4 个 `.g-item`：
+```
+<div class="g-parent">
+    <div class="g-container">
+        <div class="g-item"></div>
+        <div class="g-item"></div>
+        <div class="g-item"></div>
+        <div class="g-item"></div>
+    </div>
+</div>
+```
+首先，还是设置一个 clip-path 切割后的图形：
+```
+.g-item:nth-child(1) {
+    width: 150px;
+    height: 150px;
+    background: #000;
+    clip-path: polygon(17% 41%,6% 39%,16% 91%,18% 78%,56% 11%,28% 71%,99% 67%,25% 65%,69% 72%,46% 28%,90% 76%,67% 34%,48% 30%,79% 36%,59% 15%,23% 92%,16% 1%,32% 81%,72% 38%,50% 59%,71% 98%,66% 87%,83% 14%,36% 71%,49% 7%,9% 25%,52% 76%,10% 83%,17% 41%);
+}
+```
+效果如下：
+
+![](https://upload-images.jianshu.io/upload_images/10024246-8e74250c8048e051.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+这个图可能它会特别的奇怪，没有问题，我们继续。
+
+如果，我们将一个矩形，从左下角开始算，分为 4 份，那么每一个份就是 90° / 4 = 22.5°，我们希望切割得到其中一份：
+
+![](https://upload-images.jianshu.io/upload_images/10024246-36cd560295311e11.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+我们可以借助 mask 去完成这个切割：
+```
+.g-item:nth-child(1) {
+    width: 150px;
+    height: 150px;
+    background: #000;
+    clip-path: polygon(.....);
+    mask: conic-gradient(from 0turn at 0 100%, #000, #000 22.5deg, transparent 22.5deg, transparent);
+}
+```
+上述的图形，就被切割成了这样：
+
+![image.png](https://upload-images.jianshu.io/upload_images/10024246-68decf8ffe12b4d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+OK，基于此，我们可以得到同样的第二份图形，但是我们给它加一个 rotateY(180deg)：
+```
+.g-item:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    background: #000;
+    clip-path: polygon(.....);
+    mask: conic-gradient(from 0turn at 0 100%, #000, #000 22.5deg, transparent 22.5deg, transparent);
+    transform: rotateY(180deg);
+}
+```
+效果如下：
+
+![image.png](https://upload-images.jianshu.io/upload_images/10024246-a74b5bda889a1720.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+我们再通过 rotateZ()，给第二图形旋转一定的角度，让他和第一个贴合在一起：
+```
+.g-item:nth-child(2) {
+    clip-path: polygon(.....);
+    mask: conic-gradient(from 0turn at 0 100%, #000, #000 22.5deg, transparent 22.5deg, transparent);
+    transform: rotateY(180deg) rotateZ(-45deg);
+}
+```
+就得到了一个斜向角度的镜像图像：
+
+![image.png](https://upload-images.jianshu.io/upload_images/10024246-e2c9cc852c091be7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+因为 .g-item 被切割成了 4 份，所以第 3、4 个图形如法炮制即可，这样，整个 .g-item 的效果如下：
+
+![image.png](https://upload-images.jianshu.io/upload_images/10024246-be9e0451fca14090.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+再打开 -webkit-box-reflect，整个的图形效果如下：
+
+![image.png](https://upload-images.jianshu.io/upload_images/10024246-aaf0501b9f966c10.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+这样，一个剪纸图形就诞生啦！
+
+当然，为了得到不一样的效果，我们可以借助 JavaScript 去随机生成 CSS 中的各类参数，完整的代码，大概是这样：
+```
+<div class="g-parent">
+    <div class="g-container">
+        <div class="g-item"></div>
+        <div class="g-item"></div>
+        <div class="g-item"></div>
+        <div class="g-item"></div>
+    </div>
+</div>
+.g-container,
+.g-parent {
+    position: relative;
+    display: flex;
+    width: 150px;
+    height: 150px;
+}
+.g-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    transform-origin: 0 100%;
+    clip-path: var(--polygon, polygon(40% 0%,0% 91%,52% 100%,0% 37%,77% 23%,77% 76%,43% 22%,55% 88%,100% 100%,100% 10%));
+}
+.g-item {
+    mask: conic-gradient(from 0turn at 0 100%, #000, #000 22.5deg, transparent 22.5deg, transparent);
+}
+@for $i from 1 through 5 { 
+    .g-item:nth-child(#{$i}) {
+        transform: rotateZ(calc(22.5deg * #{$i - 1}));
+    }
+}
+.g-item:nth-child(2) {
+    transform: rotateY(180deg) rotateZ(-60deg);
+}
+.g-item:nth-child(4) {
+    transform: rotateY(180deg) rotateZ(-105deg);
+}
+.g-container {
+    -webkit-box-reflect: below;
+}
+.g-parent {
+    -webkit-box-reflect: left;
+}
+const ele = document.querySelectorAll('.g-item');
+
+document.addEventListener('click', function(e) {
+    let num = Math.floor(Math.random() * 30 + 10);
+    
+    const maskR =  Math.floor(Math.random() * 22.5 + 22.5 ) + 'deg';
+    const r1 = Math.floor(Math.random() * 100) + '%';
+    const r2 = Math.floor(Math.random() * 100) + '%'; 
+    
+    let polygon = 'polygon(' + r1 + ' ' + r2 + ',';
+    
+    for (let i=0; i<num; i++) {
+         const newR1 = Math.floor(Math.random() * 100) + '%';
+         const newR2 = Math.floor(Math.random() * 100) + '%';
+
+        polygon += newR1 + ' ' + newR2 + ','
+    }
+    
+    polygon += r1 + ' ' + r2 + ')';
+    
+    [...ele].forEach(item => {
+        item.setAttribute('style', `--polygon:${polygon};-webkit-mask:conic-gradient(from 0turn at 0 100%, #000, #000 ${maskR}, transparent ${maskR}, transparent)`);
+    });
+});
+```
+这样，每次点击鼠标，我们都能得到不同的随机剪纸图案：
+
+![](https://upload-images.jianshu.io/upload_images/10024246-6bff769acfb3f824.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+看看这个简单录制的 GIF：
+
+![](https://upload-images.jianshu.io/upload_images/10024246-2feee2f796934038.gif?imageMogr2/auto-orient/strip)
+
+完整的代码，你可以猛击这里 [CodePen Demo -- Pure CSS Art Page Cutting](https://codepen.io/Chokcoco/pen/zYpeJBZ)
+> 原文：https://segmentfault.com/a/1190000041791819
+

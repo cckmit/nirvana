@@ -1,7 +1,7 @@
 ---
 title: Mac-配置-adb
 date: 2021-03-09 21:12:40
-category: android
+categories: android
 ---
 第一步：打开终端，进入根目录。
 

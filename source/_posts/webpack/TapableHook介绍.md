@@ -1,7 +1,7 @@
 ---
 title: Tapable Hook介绍
 date: 2021-06-10 16:42:27
-category: webpack
+categories: webpack
 ---
 [![](https://upload-images.jianshu.io/upload_images/10024246-15f98345db345d9b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)](https://user-images.githubusercontent.com/14739234/76166340-b6eb0400-6198-11ea-940e-c2b3e7482aa8.png) 
 

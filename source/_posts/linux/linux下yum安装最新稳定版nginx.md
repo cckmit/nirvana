@@ -1,7 +1,7 @@
 ---
 title: linux下yum安装最新稳定版nginx
 date: 2021-03-09 21:12:40
-category: linux
+categories: linux
 ---
 ## 摘抄nginx官网文档
 

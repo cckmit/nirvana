@@ -1,7 +1,7 @@
 ---
 title: webpack使用-详解DllPlugin
 date: 2021-04-21 14:49:59
-category: webpack
+categories: webpack
 ---
 ### 什么是DLL
 

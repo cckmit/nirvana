@@ -1,7 +1,7 @@
 ---
 title: 如何在Github中搜索特殊字符
 date: 2021-03-09 21:21:13
-category: git
+categories: git
 ---
 github仓库中搜索包含特殊字符的字符串(例如" example.com"或" Example：")
 ## 方法

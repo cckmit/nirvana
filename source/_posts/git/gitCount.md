@@ -1,7 +1,7 @@
 ---
 title: Git统计每个人提交的Commit次数和代码行数
 date: 2021-03-09 20:35:36
-category: git
+categories: git
 ---
 提交次```git shortlog --numbered --summary```
 查看所有的```commit数git log --oneline | wc -l```

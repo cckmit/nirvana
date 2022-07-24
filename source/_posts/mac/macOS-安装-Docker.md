@@ -1,7 +1,7 @@
 ---
 title: macOS-安装-Docker
 date: 2021-03-10 21:12:40
-category: mac
+categories: mac
 ---
 # macOS
 

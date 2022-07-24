@@ -1,7 +1,7 @@
 ---
 title: nginx日常维护常用命令
 date: 2021-03-09 21:12:40
-category: linux
+categories: linux
 ---
 
 这篇文章主要介绍了nginx日常维护如nginx启动、重启、关闭等常用命令,需要的朋友可以参考下

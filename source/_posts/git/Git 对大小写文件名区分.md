@@ -1,7 +1,7 @@
 ---
 title: Git 对大小写文件名区分
 date: 2021-10-09 21:19:18
-category: git
+categories: git
 ---
 git 默认不区分文件名大小写
 

@@ -1,7 +1,7 @@
 ---
 title: Android WebView的 onPause()和 pauseTimers()
 date: 2021-12-21 21:12:40
-category: android
+categories: android
 ---
 onPause()和pauseTimers()在Android平台的浏览器应用中，应该经常用到。与其想对应的还有onResume()和resumeTimers()。
 

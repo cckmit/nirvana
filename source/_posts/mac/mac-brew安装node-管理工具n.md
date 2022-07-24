@@ -1,7 +1,7 @@
 ---
 title: mac-brew安装node-管理工具n
 date: 2021-03-10 21:12:40
-category: mac
+categories: mac
 ---
 ## 安装
 ```

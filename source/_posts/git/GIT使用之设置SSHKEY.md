@@ -1,7 +1,7 @@
 ---
 title: GIT使用之设置SSH KEY
 date: 2021-04-21 14:48:46
-category: git
+categories: git
 ---
 ## 检查是否设置过SSH Key**
 

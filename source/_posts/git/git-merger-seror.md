@@ -1,7 +1,7 @@
 ---
 title: 'fatal: refusing to merge unrelated histories'
 date: 2021-03-09 21:23:37
-category: git
+categories: git
 ---
 Git 的报错
 一、fatal: refusing to merge unrelated histories

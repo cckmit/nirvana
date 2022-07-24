@@ -1,7 +1,7 @@
 ---
 title: 面试官：webpack原理都不会？
 date: 2021-09-10 16:53:07
-category: webpack
+categories: webpack
 ---
 ## 引言
 

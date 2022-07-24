@@ -1,7 +1,7 @@
 ---
 title: Linux下iptables防火墙配置详解
 date: 2021-03-09 21:12:40
-category: linux
+categories: linux
 ---
 1. iptables命令及参数介绍
   iptables常用命令：

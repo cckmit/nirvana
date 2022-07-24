@@ -1,7 +1,7 @@
 ---
 title: Linux 命令：exec
 date: 2021-09-09 21:12:40
-category: linux
+categories: linux
 ---
 命令简介
 exec 命令用于调用并执行指定的命令。

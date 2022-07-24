@@ -1,7 +1,7 @@
 ---
 title: prefetch 和 preload 及 webpack 的相关处理
 date: 2021-03-11 21:12:40
-category: webpack
+categories: webpack
 ---
 
 使用预取和预加载是网站性能和用户体验提升的一个很好的途径，本文介绍了使用 prefetch 和 prefetch 进行预取和预加载的方法，并使用 webpack 进行实现

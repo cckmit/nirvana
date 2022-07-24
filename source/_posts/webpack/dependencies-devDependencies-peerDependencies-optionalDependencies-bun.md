@@ -1,7 +1,7 @@
 ---
 title: dependencies/devDependencies/peerDependencies/optionalDependencies/bundledDependencies
 date: 2021-03-11 21:12:40
-category: webpack
+categories: webpack
 ---
 
 ## **npm** 目前支持以下几类依赖包管理：

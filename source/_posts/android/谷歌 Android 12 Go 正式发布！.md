@@ -1,7 +1,7 @@
 ---
 title: 谷歌 Android 12 Go 正式发布！
 date: 2021-12-18 21:12:40
-category: android
+categories: android
 ---
 12 月 15 日，谷歌发布了适用于小型或廉价智能手机的 Android 12 Go 版本操作系统。全新登场的 Android 12 Go 版本更流畅、更省电、更安全。
 

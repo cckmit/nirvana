@@ -1,7 +1,7 @@
 ---
 title: Git多账号配置
 date: 2021-03-09 21:22:47
-category: git
+categories: git
 ---
 ### 一、如何生成ssh密钥
 

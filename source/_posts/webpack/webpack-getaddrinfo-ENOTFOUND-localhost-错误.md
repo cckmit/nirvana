@@ -1,7 +1,7 @@
 ---
 title: webpack getaddrinfo ENOTFOUND localhost错误
 date: 2021-03-11 21:12:40
-category: webpack
+categories: webpack
 ---
 
 原因 没有指定 localhost 

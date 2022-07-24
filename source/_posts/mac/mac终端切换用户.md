@@ -1,7 +1,7 @@
 ---
 title: mac终端切换用户
 date: 2021-03-10 21:12:40
-category: mac
+categories: mac
 ---
 1、mac终端切换用户到root
 sudo -i即可

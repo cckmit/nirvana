@@ -1,7 +1,7 @@
 ---
 title: macOS系统下安装Homebrew慢
 date: 2021-03-10 21:12:40
-category: mac
+categories: mac
 ---
 #### 1.获取install文件并编辑
 

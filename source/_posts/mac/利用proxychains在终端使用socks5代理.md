@@ -1,7 +1,7 @@
 ---
 title: 利用proxychains在终端使用socks5代理
 date: 2021-03-10 21:12:40
-category: mac
+categories: mac
 ---
 ### 1.proxychains安装
 ```

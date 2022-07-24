@@ -1,7 +1,7 @@
 ---
 title: NGINX常用指令
 date: 2021-10-19 16:28:03
-category: linux
+categories: linux
 ---
 # HttpCore指令集
 

@@ -1,7 +1,7 @@
 ---
 title: OSX---降级Safari-12到11-1-2
 date: 2021-03-10 21:12:40
-category: mac
+categories: mac
 ---
 ### 操作
 

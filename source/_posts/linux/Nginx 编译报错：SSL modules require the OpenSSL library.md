@@ -1,7 +1,7 @@
 ---
 title: Nginx 编译报错：SSL modules require the OpenSSL library
 date: 2021-11-27 16:28:03
-category: linux
+categories: linux
 ---
 ginx 编译报错：SSL modules require the OpenSSL library
 

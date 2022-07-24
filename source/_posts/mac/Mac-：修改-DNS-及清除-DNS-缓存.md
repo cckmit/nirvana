@@ -1,7 +1,7 @@
 ---
 title: Mac-：修改-DNS-及清除-DNS-缓存
 date: 2021-03-10 21:12:40
-category: mac
+categories: mac
 ---
 *   1.  在苹果菜单选择 “系统偏好设置”。
 

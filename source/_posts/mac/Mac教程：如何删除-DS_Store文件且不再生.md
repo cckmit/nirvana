@@ -1,7 +1,7 @@
 ---
 title: Mac教程：如何删除-DS_Store文件且不再生
 date: 2021-03-10 21:12:40
-category: mac
+categories: mac
 ---
 ```
 .DS_Store文件重新生成非常令人困扰，我们可以用终端命令简单的处理掉。

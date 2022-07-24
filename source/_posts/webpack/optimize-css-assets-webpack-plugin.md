@@ -1,7 +1,7 @@
 ---
 title: webpack之插件optimize css assets webpack plugin
 date: 2021-03-20 17:44:26
-category: webpack
+categories: webpack
 ---
 ## 1. 安装：
 主要是用来压缩css文件

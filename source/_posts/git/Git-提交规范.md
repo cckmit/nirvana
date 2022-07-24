@@ -1,7 +1,7 @@
 ---
 title: Git-提交规范
 date: 2021-09-09 21:12:40
-category: git
+categories: git
 ---
 git是现在市面上最流行的版本控制工具，书写良好的commit message能大大提高代码维护的效率。但是在日常开发中由于缺少对于commit message的约束，导致填写内容随意、质量参差不齐，可读性低亦难以维护。在项目中引入commit message规范已是迫在眉睫。
 

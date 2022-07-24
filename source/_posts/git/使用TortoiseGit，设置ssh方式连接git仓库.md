@@ -1,7 +1,8 @@
 ---
 title: 使用TortoiseGit，设置ssh方式连接git仓库
 date: 2021-09-09 21:12:40
-category: git
+categories: [git]
+tags: [git] 
 ---
 
 开始设置之前的准备：建立项目文件夹，初始化git仓库(右键 git  init)，右键打开 git bash ，git pull “仓库地址”, 把网站上的仓库代码拉取下来。

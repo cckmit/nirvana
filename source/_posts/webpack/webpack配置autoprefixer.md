@@ -1,7 +1,7 @@
 ---
 title: webpack配置autoprefixer
 date: 2021-03-11 21:12:40
-category: webpack
+categories: webpack
 ---
 
 Autoprefixer解析CSS文件并且添加浏览器前缀到CSS规则里，使用[Can I Use](http://www.caniuse.com/)的数据来决定哪些前缀是需要的。

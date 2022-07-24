@@ -1,7 +1,7 @@
 ---
 title: Linux 命令：du
 date: 2021-09-09 21:12:40
-category: linux
+categories: linux
 ---
 ## 命令简介
 du 命令用于显示每个文件和目录使用磁盘空间大小，du 会显示指定的目录或文件所占用的磁盘空间大小。还可以利用 du 命令，可以快速的查找 Linux 下的大目录。

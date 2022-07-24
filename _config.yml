@@ -14,7 +14,7 @@ timezone: ''
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://www.nirvana.net.cn/
 root: /
-permalink: :title/
+permalink: :year/:abbrlink.html
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -99,7 +99,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: pure
 #git@github.com:lzhwWeb/nirvana.git
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -109,7 +109,7 @@ deploy:
 - 
   type: git
   repo: 
-    github: https://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@github.com/lzhwWeb/nirvana.git
+    github: https://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@github.com/lzhwWeb/nirvana.git
 - 
   type: leancloud_counter_security_sync
 - 

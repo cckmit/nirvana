@@ -1,7 +1,7 @@
 ---
 title: Git 清除远端已删除的分支
 date: 2021-03-09 21:05:00
-category: git
+categories: git
 ---
 使用 git branch -a 命令可以查看所有本地分支和远程分支（git branch -r 可以只查看远程分支） 
 发现很多在远程仓库已经删除的分支在本地依然可以看到。

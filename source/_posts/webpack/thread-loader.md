@@ -1,7 +1,7 @@
 ---
 title: thread-loader
 date: 2021-06-10 16:54:43
-category: webpack
+categories: webpack
 ---
 ## 快速开始 [](https://webpack.docschina.org/loaders/thread-loader/#getting-started)
 

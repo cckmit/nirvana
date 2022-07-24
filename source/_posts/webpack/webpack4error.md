@@ -3,7 +3,7 @@ title: >-
   关于 webpack-cli4.0 及以上版本 和 webpack-dev-server 之间的依赖报connot find module
   “webpack-cli/bin/config-yargs”
 date: 2021-03-15 13:15:56
-category: webpack
+categories: webpack
 ---
 今天在执行webpack-dev-server命令时，一直报Error: Cannot find module ‘webpack-cli/bin/config-yargs’
 在执行npm run dev命令时报：

@@ -1,7 +1,7 @@
 ---
 title: McAfee-Agent-占用8081-端口号
 date: 2021-03-10 21:12:40
-category: mac
+categories: mac
 ---
 公司电脑被标装，McAfee Agent关不掉
 

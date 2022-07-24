@@ -1,7 +1,7 @@
 ---
 title: Nginx 缓存机制详解
 date: 2021-10-11 16:28:03
-category: linux
+categories: linux
 ---
 Nginx 缓存作为性能优化的一个重要手段，可以极大减轻后端服务器的负载。下面我们将介绍 Nginx 缓存配置的相关指令以及 http 缓存机制，以及 Nginx 缓存实践案例分析。
 

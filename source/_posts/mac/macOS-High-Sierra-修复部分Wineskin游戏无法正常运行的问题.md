@@ -1,7 +1,7 @@
 ---
 title: macOS-High-Sierra-修复部分Wineskin游戏无法正常运行的问题
 date: 2021-03-10 21:12:40
-category: mac
+categories: mac
 ---
 之前，有很多朋友留言小子因为系统升级到了最新macOS High Sierra而无法打开博客下载的Wineskin移植游戏了。
 相信所有升级到macOS High Sierra的朋友运行wineskin wrapper移植的游戏都会遇到这个问题。不过，小子经过一番搜索，终于找到了解决办法，测试有效，现在分享给大家。

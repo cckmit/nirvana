@@ -1,7 +1,7 @@
 ---
 title: git切换仓库后同步代码
 date: 2021-09-09 21:12:40
-category: git
+categories: git
 ---
 git仓库需要迁移到新的服务器，现在需要把所有的代码同步到新的仓库。
 

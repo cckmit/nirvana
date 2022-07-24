@@ -1,7 +1,7 @@
 ---
 title: MAC-蓝牙问题解决加强版(-Airdrop-找不到,-蓝牙找不到等-)
 date: 2021-03-10 21:12:40
-category: mac
+categories: mac
 ---
 如果你电脑出现了比如经常丢链接, 或者Hand off 不工作, Airdrop 找不到的话, 先升级到10.11.2 系统, 应该能解决很多已存的Bug.
 

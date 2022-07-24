@@ -1,7 +1,7 @@
 ---
 title: GitHub 常用搜索语法
 date: 2021-03-09 21:19:18
-category: git
+categories: git
 ---
 **[官网](https://docs.github.com/cn/github/searching-for-information-on-github/searching-for-repositories)**
 

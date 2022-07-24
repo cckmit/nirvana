@@ -1,7 +1,7 @@
 ---
 title: Mac-效率工具软件-OpenInTerminal
 date: 2021-03-10 21:12:40
-category: mac
+categories: mac
 ---
 软件是以 Finder 的扩展形式存在的，安装后你并不会在 Applications 文件夹中看到它。
 

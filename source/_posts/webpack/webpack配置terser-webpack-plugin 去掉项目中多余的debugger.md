@@ -1,7 +1,7 @@
 ---
 title: webpack配置terser-webpack-plugin 去掉项目中多余的debugger
 date: 2021-03-11 21:12:40
-category: webpack
+categories: webpack
 ---
 
 ## 入门

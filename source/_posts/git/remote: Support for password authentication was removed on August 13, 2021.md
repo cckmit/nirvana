@@ -1,7 +1,7 @@
 ---
 title: remote:Support for password authentication was removed on August 13, 2021
 date: 2021-09-05 20:35:36
-category: git
+categories: git
 ---
 一、 问题描述
 如果你在七夕（没错就是2021年8月14日）的这一天刚好加班，想把这个仓库送给（push）github，你就刚好会遇到这个问题：remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.

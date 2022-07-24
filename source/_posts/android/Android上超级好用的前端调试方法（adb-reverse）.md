@@ -1,7 +1,7 @@
 ---
 title: Android上超级好用的前端调试方法（adb-reverse）
 date: 2021-03-09 21:12:40
-category: android
+categories: android
 ---
 前端开发前端页面，经常需要改两行代码就要看看页面效果。如果是兼容桌面浏览器的页面还好办，在本地启动服务，写两句代码refresh一下就可以看到效果了，但是更多的时候，页面是必须在APP中加载，用到APP提供的JsApi的，桌面浏览器根本没法使用页面的功能。
 

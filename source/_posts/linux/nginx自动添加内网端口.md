@@ -1,7 +1,7 @@
 ---
 title: nginx自动添加内网端口
 date: 2021-03-09 21:12:40
-category: linux
+categories: linux
 ---
 ## 现象：
 

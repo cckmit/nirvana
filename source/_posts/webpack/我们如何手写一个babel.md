@@ -1,7 +1,7 @@
 ---
 title: webpack插件babel，我们如何手写一个babel，以及babel的原理
 date: 2021-06-10 16:53:07
-category: webpack
+categories: webpack
 ---
 ## 简介
 
